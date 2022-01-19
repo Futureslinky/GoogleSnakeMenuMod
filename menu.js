@@ -1,5 +1,7 @@
-window.snake.more_menu = function(e) {
-  e = e || 25;
+window.snake.more_menu = function() {
+  window.snake_scheme_epic_cool = window.snake_scheme_epic_cool || { light_squares: '#AAD751', dark_squares:  '#A2D149' };
+  window.snake_scheme_epic_cool = window.snake_scheme_epic_cool || { light_squares: '#AAD751', dark_squares:  '#A2D149' };
+  
   
   // micro
   let img = new Image;
@@ -13,6 +15,12 @@ window.snake.more_menu = function(e) {
   img.src = 'https://github.com/carlgustavh/GoogleSnakeCustomMenuStuffImages/blob/main/Tiny.png?raw=true';
   img.width = 47;
   img.height = 47;
+  document.querySelector('#size').appendChild(img);
+
+  // between small & standard
+  img = new Image;
+  img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAABYElEQVRoQ+2Y2w7DIAxD1///6E2VRsUYJXZuFIm9AuHEMSzleC38OxZmf214oXrvZtxNMEugAtWL0QLX/JY9f3SwBGLgz31G81VHLwq+B1NXw7LvFdsSRKOkZs1tVTY8aNilbeNqmVOwTNssC+9umUzl3VXf8OC5WVb5EL9n2CYMPBPeciVPaw9CvF6ysSiCgIV9iFhtg7Q0oR8lFuUR+HrOKBGVEzLh3ROZBS99aUGWfhI8a0NTS0xv5r1ghvLIFQvl+SR4OikGvhec3XDU67CxKM+3wTVNF/JQBQsKT6xevMo1RislvJrR8Rj4E7r3L8nEmKZ8D54Br9ePHmfhmPDE792l8Xm59qS1qbbRJn63LhQ+w+9QT6NpQe9aWrQCroeVybL1q+TfUdfoclg18PXGjEelZJlYlzBoyaFGaTBJgpPGu6E3PFAWSVlp/NHKA/n/T8myjQpOWrThJYWixj+UTlgwJgIXFAAAAABJRU5ErkJggg==';
+  img.width = img.height = 47;
   document.querySelector('#size').appendChild(img);
 
   // super big
@@ -208,25 +216,25 @@ window.snake.more_menu = function(e) {
       const pafihwotyhopyplacetheiopafsjafijplesllllllll = functio.match(
         /this\.[a-zA-Z0-9_$]{1,6}\.push\([a-zA-Z0-9_$]{1,6}\(this,/
       )[0];
-      const inevilmodes = functio.match(
-        /[a-zA-Z0-9_$]{1,6}\(this,2\)\|\|[a-zA-Z0-9_$]{1,6}\(this,8\)\|\|[a-zA-Z0-9_$]{1,6}\(this,9\)\|\|[a-zA-Z0-9_$]{1,6}\(this,10\)/
-      )[0];
-      const dothething = functio.match(
-        /for\(d=[a-zA-Z0-9_$]{1,6}\(this\.[a-zA-Z0-9_$]{1,6}\),[^}]*?this\)/
-      )[0];
+      const inevilmodesf = code.match(
+        /[a-zA-Z0-9_$]{1,6}=function\(a\){return [a-zA-Z0-9_$]{1,6}\(a,2\)\|\|[a-zA-Z0-9_$]{1,6}\(a,8\)\|\|[a-zA-Z0-9_$]{1,6}\(a,9\)\|\|[a-zA-Z0-9_$]{1,6}\(a,10\)}/
+      )[0].match(/[a-zA-Z0-9_$]{1,6}/)[0];
+      console.log(inevilmodesf);
+
       const dothethingportalstyle = functio.match(
-        /for\(b=Math\.floor\(21\/\(1===this\.[^}]*?type=this\.[a-zA-Z0-9_$]{1,6}\[d\]\.type\)/
+        /for\(b=Math\.floor\(42\/\n?this\.[a-zA-Z0-9_$]{1,6}\.length\),[^]*?\);/
       )[0];
+      console.log(dothethingportalstyle);
       const modecheck = code.match(
-        /[a-zA-Z0-9_$]{1,6}=function\(a,b\){return 12===a[^}]*?===b}/
+        /[a-zA-Z0-9_$]{1,6}=function\(a,b\){return 13===a[^}]*?===b}/
       )[0].match(/[a-zA-Z0-9_$]{1,6}/)[0];
 
       eval(
         functio.replace(
-          `if(c=${inevilmodes})`,
+          `if(d=${inevilmodesf}(this))`,
           `
           if(${thjaselcdtctedaboupplelcountthingffjfjfjfjfjfjfjfjfjfj} > 2) {
-            if(!(${inevilmodes})) {
+            if(!(${inevilmodesf}(this))) {
               if(${thjaselcdtctedaboupplelcountthingffjfjfjfjfjfjfjfjfjfj} === 3) {
                 ${pafihwotyhopyplacetheiopafsjafijplesllllllll} 1, 2));
                 ${pafihwotyhopyplacetheiopafsjafijplesllllllll} -1, 2));
@@ -347,7 +355,6 @@ window.snake.more_menu = function(e) {
               } else
                 ${pafihwotyhopyplacetheiopafsjafijplesllllllll} 100000, 1));
 
-              ${dothething}
             } else {
               if(${thjaselcdtctedaboupplelcountthingffjfjfjfjfjfjfjfjfjfj} < 7)
                 for(
@@ -408,9 +415,9 @@ window.snake.more_menu = function(e) {
                   ${pafihwotyhopyplacetheiopafsjafijplesllllllll} 0, 0));
               }
             }
-            if(${modecheck}(this, 2)) {${dothethingportalstyle}}
-            if(${modecheck}(this, 10)) {${dothething}}
-          } else if(${inevilmodes})
+
+            if(${modecheck}(this,2)) { ${dothethingportalstyle} }
+          } else if(d=${inevilmodesf}(this))
           `
         ).replace(
           'this,!1)}',
@@ -547,12 +554,48 @@ window.snake.more_menu = function(e) {
       );
       
 
+      // eval(
+      //   code.match(
+      //     /[a-zA-Z0-9_$]{1,6}=function\(a\){switch\(a\.[a-zA-Z0-9_$]{1,6}\){case 2:return 512;[^]*?256}}/
+      //   )[0].replace(
+      //     '96;',
+      //     `96;case 3:return 25;case 4:return 48;case 5:return 1200;case 6:return 3500;case 7:return 10000;case 8:return 25000;case 9:return 100000;`
+      //   )
+      // );
+
+      const c = code.match(
+        /[a-zA-Z0-9_$]{1,8}\.prototype\.[a-zA-Z0-9_$]{1,8}=function\(\){var a=this,b=[^]*?canvas[^]*?\);return b\.promise}/
+      )[0];
+      const wa = c.match(
+        /a\.[a-zA-Z0-9_$]{1,8}\/128/
+      )[0].replace('/128', '');
+      const size = code.match(
+        /1===this\.[a-zA-Z0-9_$]{1,8}\|\|\(e\+=1\)/
+      )[0].replace('1===this.', '').replace('||(e+=1)', '');
+      console.log(size);
+      
+      // console.log(lightSquares, darkSquares);
+
       eval(
-        code.match(
-          /[a-zA-Z0-9_$]{1,6}=function\(a\){switch\(a\.[a-zA-Z0-9_$]{1,6}\){case 2:return 512;[^]*?256}}/
-        )[0].replace(
-          '96;',
-          `96;case 3:return ${e};case 4:return 48;case 5:return 1200;case 6:return 3500;case 7:return 10000;case 8:return 25000;case 9:return 100000;`
+        c.replaceAll(
+          '#AAD751',
+          window.snake_scheme_epic_cool.light_squares
+        ).replaceAll(
+          '#a2d149',
+          window.snake_scheme_epic_cool.dark_squares
+        ).replace(
+          `Math.floor(c/${wa}),Math.floor(d/${wa})));`,
+          `
+          window.bwidth  = a.${size} === 3 ? 5 : a.${size} === 4 ? 7 : a.${size} === 5 ? 12 : a.${size} === 6 ? 37 : a.${size} === 7 ? 64 : a.${size} === 8 ? 105 : a.${size} === 9 ? 168 : a.${size} === 10 ? 600 : Math.floor(c/${wa}),
+          window.bheight = a.${size} === 3 ? 4 : a.${size} === 4 ? 6 : a.${size} === 5 ? 11 : a.${size} === 6 ? 32 : a.${size} === 7 ? 56 : a.${size} === 8 ? 92  : a.${size} === 9 ? 147 : a.${size} === 10 ? 530 : Math.floor(d/${wa})));
+
+          let squareSize = 600 / (window.bwidth);
+          if(squareSize * window.bheight > 530)
+            squareSize = 530 / window.bheight;
+          squareSize = squareSize * .98;
+          if(squareSize > 1)squareSize = ~~squareSize;
+          a.${size} >= 3 && (${wa} = squareSize);
+          console.log(a.${size});`
         )
       );
     };
